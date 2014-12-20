@@ -155,41 +155,54 @@ img {
   display: block;
   margin: 170px auto 0;
   text-align: center;
+  padding:20px;
   font-family: $Dosis;
   text-shadow: 0 0 7px rgba(0,0,0,0.9);
-  padding:20px;
 
   @include mobile {
-    margin-top: 50px;
+    margin-top: 10px;
   }
 }
 
 .site-name {
   margin: 0;
-  display: block;
   font-family: $Dosis;
+  display: block;
   color:white;
-  cursor: pointer;
   font-weight: 300;
   font-size: 48px;
-  letter-spacing: 1px;
+  a{
+    cursor: pointer;
+  }
+  .names{
+    text-align: center;
+    font-size: 24px;
+    margin:10px;
+  }
   & a:hover{
     color:white;
   }
+  & i{
+    font-style: normal;
+  }
   @include mobile {
-    font-size: 32px;
+    font-size: 24px;
+    .names{
+      font-size: 14px;
+      margin:0;
+    }
   }
 }
 
 .site-description {
-  margin: -5px 0 0 0;
+  margin: -5px 0 20px;
   font-size: 32px;
   opacity: 1.0;
   display: block;
   
   @include mobile {
-    margin: 3px 0;
-    font-size: 24px;
+    margin: 0;
+    font-size: 18px;
   }
 }
 
@@ -201,16 +214,11 @@ nav {
   text-align: center;
   text-shadow: 0 0 7px rgba(0,0,0,0.9);
 
-  @include mobile {
-    margin-top: 9px;
-    display: block;
-    font-size: 16px;
-  }
 
   a {
     color: white;
     text-align: right;
-    font-weight: 300;
+    font-weight: 700;
     letter-spacing: 1px;
     font-size: 18px;
     transition: font-size .4s;
@@ -218,6 +226,17 @@ nav {
     &:hover{
       font-size: 24px;
       color:#ccc;
+    }
+  }
+  @include mobile {
+    margin-top: 9px;
+    display: block;
+    font-size: 16px;
+    a{
+      font-size: 12px;
+      &:hover{
+        font-size: 12px;
+      }
     }
   }
 }
@@ -235,11 +254,11 @@ nav {
     left:0;
     z-index:-1;
     width:100%;
-    filter: sepia(20%);
-    -webkit-filter: sepia(20%);
+    filter: sepia(30%);
+    -webkit-filter: sepia(30%);
   }
   @include mobile {
-    height:300px;
+    height:180px;
     text-align: center;
     position: relative;
   }

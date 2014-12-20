@@ -16,8 +16,10 @@
 
     <script src="{{ site.baseurl }}/script/jquery-1.11.1.min.js"></script>
     <script src="{{ site.baseurl }}/script/bootstrap.min.js"></script>
+    <script src="{{ site.baseurl }}/script/animateHeadline.js"></script>
     <!--<script src="{{ site.baseurl }}/script/index.js"></script>-->
     <link href='http://fonts.googleapis.com/css?family=Dosis:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/animateHeadline.css" />
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
   </head>
@@ -28,15 +30,24 @@
       <div class="container">
         
         <div class="site-info">
-          <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-          <p class="site-description">{{ site.description }}</p>
+
+          <h1 class="site-name cd-headline letters type">
+            <a href="{{ site.baseurl }}/">{{ site.name }}</a>
+            <p class="site-description">{{ site.description }}</p> 
+            <p class="names">with
+            <span class="cd-words-wrapper waiting">
+              <b class="is-visible">Luke Zhao</b>
+              <b>Jerry Wei</b>
+              <b>Jerry Feng</b>
+              <b>Mason Zhou</b>
+            </span>
+            </p>
+          </h1>
         </div>
         
         <nav>
-          <a href="{{ site.baseurl }}/">Luke Zhao</a> - 
-          <a href="{{ site.baseurl }}/about">Jerry Wei</a> - 
-          <a href="{{ site.baseurl }}/about">Jerry Feng</a> - 
-          <a href="{{ site.baseurl }}/about">Mason Zhou</a>
+          <a href="{{ site.baseurl }}/">Logs</a> - 
+          <a href="{{ site.baseurl }}/schedule">Schedule</a>
         </nav>
       </div>
     </header>
