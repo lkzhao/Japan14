@@ -2,7 +2,7 @@
 ---
 # scrollWatch Plugin
 # execute the callback when the selected element(s) reach the top of the page
- 
+
 (($) ->
   isWatching = no
   activeTarget = null

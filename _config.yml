@@ -5,8 +5,10 @@
 # Name of your site (displayed in the header)
 name: Japan @ Christmas 2014
 
+bg: bg.jpg
+
 # Short bio or description (displayed in the header)
-description: "Luke Zhao, Jerry Wei, Jerry Feng, & Mason Zhou"
+description: "日本2014圣诞之旅！"
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: http://s.gravatar.com/avatar/e7220d9c3a4827d5db9b0c4d8e0bcef9?s=80
