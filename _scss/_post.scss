@@ -1,12 +1,14 @@
 .post-title{
 	a{
-		color:$blue;
+		color:#333;
+		margin:0;
 		&:hover{
-			color:$blue2;
+			color:#333;
+			text-decoration: underline;
 		}
 	}
-	small{
-		margin-left:20px;
+	p{
+		margin:-10px 3px 0;
 		font-size: 13px;
 		font-weight: 400;
 		color:#555555;

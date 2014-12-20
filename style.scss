@@ -153,14 +153,19 @@ img {
 
 .site-info {
   display: block;
+  float:left;
   margin: 170px auto 0;
-  text-align: center;
   padding:20px;
   font-family: $Dosis;
-  text-shadow: 0 0 7px rgba(0,0,0,0.9);
+  text-shadow: 0 0 3px rgba(0,0,0,1);
 
+  @include medium {
+    margin-top: 100px;
+    padding:0;
+  }
   @include mobile {
     margin-top: 10px;
+    padding:0;
   }
 }
 
@@ -170,12 +175,11 @@ img {
   display: block;
   color:white;
   font-weight: 300;
-  font-size: 48px;
+  font-size: 56px;
   a{
     cursor: pointer;
   }
   .names{
-    text-align: center;
     font-size: 24px;
     margin:10px;
   }
@@ -186,9 +190,9 @@ img {
     font-style: normal;
   }
   @include mobile {
-    font-size: 24px;
+    font-size: 40px;
     .names{
-      font-size: 14px;
+      font-size: 20px;
       margin:0;
     }
   }
@@ -196,54 +200,48 @@ img {
 
 .site-description {
   margin: -5px 0 20px;
-  font-size: 32px;
+  font-size: 44px;
   opacity: 1.0;
   display: block;
   
   @include mobile {
     margin: 0;
-    font-size: 18px;
+    font-size: 26px;
   }
 }
 
 nav {
   display: block;
-  margin: 0 auto;
+  position:absolute;
+  top:0;
+  right: 0;
+  left:0;
+  height:50px;
+  background:rgba(0,0,0,0.3);
   font-family: $Dosis;
   font-size: 24px;
-  text-align: center;
-  text-shadow: 0 0 7px rgba(0,0,0,0.9);
-
+  text-align: right;
+  text-shadow: 0 0 3px rgba(0,0,0,1);
+  padding:8px;
 
   a {
     color: white;
-    text-align: right;
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-size: 18px;
-    transition: font-size .4s;
-    -webkit-transition: font-size .4s, color .4s;
+    margin-left:20px;
     &:hover{
-      font-size: 24px;
       color:#ccc;
     }
   }
   @include mobile {
-    margin-top: 9px;
     display: block;
-    font-size: 16px;
-    a{
-      font-size: 12px;
-      &:hover{
-        font-size: 12px;
-      }
-    }
+    font-size: 14px;
+    height:30px;
+    padding:5px;
   }
 }
 .navbar {
   padding: 20px 0;
   position:relative;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 2px solid #555;
   background-size: cover;
   height:500px;
   color:white;
@@ -257,10 +255,11 @@ nav {
     filter: sepia(30%);
     -webkit-filter: sepia(30%);
   }
+  @include medium {
+    height:350px;
+  }
   @include mobile {
     height:180px;
-    text-align: center;
-    position: relative;
   }
 }
 
@@ -270,7 +269,6 @@ nav {
 //
 // .main
 //
-
 .posts > .post {
   padding-bottom: 2em;
   border-bottom: 1px solid $lightGray;

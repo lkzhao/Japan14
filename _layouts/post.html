@@ -1,17 +1,73 @@
 ---
-layout: default
+layout: null
 ---
 
-<article class="post container">
-  <h1 class="title">{{ page.title }}</h1>
 
-  <div class="entry">
-    {{ content }}
-  </div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
-  {% include disqus.html disqus_identifier=page.disqus_identifier %}
-</article>
+    <meta name="author" content="{{ site.name }}" />
+    <meta name="description" content="{{ site.description }}">
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script src="{{ site.baseurl }}/script/jquery-1.11.1.min.js"></script>
+    <script src="{{ site.baseurl }}/script/bootstrap.min.js"></script>
+    <script src="{{ site.baseurl }}/script/animateHeadline.js"></script>
+    <!--<script src="{{ site.baseurl }}/script/index.js"></script>-->
+    <link href='http://fonts.googleapis.com/css?family=Dosis:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/animateHeadline.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/animate.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+  </head>
+
+  <body>
+    <header class="navbar clearfix" data-spy="affix" data-offset-top="80">
+      <img class="bg" src="{{ site.baseurl }}/images/{{page.coverImage}}" />
+      <nav>
+        <div class="container">
+          <a href="{{ site.baseurl }}/">Logs</a>
+          <a href="{{ site.baseurl }}/schedule">Schedule</a>
+        </div>
+      </nav>
+    </header>
+
+    <div id="main" role="main">
+      <article class="post container">
+        <h1 class="title">{{ page.title }}</h1>
+
+        <div class="entry">
+          {{ content }}
+        </div>
+
+        <div class="date">
+          Written on {{ page.date | date: "%B %e, %Y" }}, by {{page.author}}
+        </div>
+
+        {% include disqus.html disqus_identifier=page.disqus_identifier %}
+      </article>
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          <a href="{{ site.baseurl }}/">Luke Zhao</a> - 
+          <a href="{{ site.baseurl }}/">Jerry Wei</a> - 
+          <a href="{{ site.baseurl }}/">Jerry Feng</a> - 
+          <a href="{{ site.baseurl }}/">Mason Zhou</a>
+
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
+
