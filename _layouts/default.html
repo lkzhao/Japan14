@@ -17,24 +17,31 @@
     <script src="{{ site.baseurl }}/script/jquery-1.11.1.min.js"></script>
     <script src="{{ site.baseurl }}/script/bootstrap.min.js"></script>
     <script src="{{ site.baseurl }}/script/animateHeadline.js"></script>
+    <script src="{{ site.baseurl }}/script/3DHeader.js"></script>
     <!--<script src="{{ site.baseurl }}/script/index.js"></script>-->
     <link href='http://fonts.googleapis.com/css?family=Dosis:300,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/animateHeadline.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/3DHeader.css" />
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/animate.css" />
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
   </head>
 
   <body data-spy="scroll" data-target=".navbar-example">
-    <header class="navbar clearfix" data-spy="affix" data-offset-top="80">
+    <header class="cd-header navbar clearfix">
+
       <img class="bg" src="{{ site.baseurl }}/images/{{site.bg}}" />
-      <nav>
+      <!-- <nav class="animated fadeIn ">
         <div class="container">
           <a href="{{ site.baseurl }}/">Logs</a>
           <a href="{{ site.baseurl }}/schedule">Schedule</a>
         </div>
-      </nav>
+      </nav> -->
       <div class="container">
+        <a href="#0" class="cd-3d-nav-trigger">
+          Menu
+          <span></span>
+        </a>
         
         <div class="site-info animated bounceInDown">
 
@@ -53,22 +60,36 @@
         </div>
         
       </div>
-    </header>
-
-    <div id="main" role="main">
-      {{ content }}
-    </div>
-
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          <a href="{{ site.baseurl }}/">Luke Zhao</a> - 
-          <a href="{{ site.baseurl }}/">Jerry Wei</a> - 
-          <a href="{{ site.baseurl }}/">Jerry Feng</a> - 
-          <a href="{{ site.baseurl }}/">Mason Zhou</a>
-
-        </footer>
+    </header> <!-- .cd-header -->
+    
+    <main>
+      <div id="main" role="main" class="animated fadeIn">
+        {{ content }}
       </div>
-    </div>
+
+      <div class="wrapper-footer">
+        <div class="container">
+          <footer class="footer">
+            <a href="http://www.lkz.ca/about">Luke Zhao</a> - 
+            <a href="{{ site.baseurl }}/jw">Jerry Wei</a> - 
+            <a href="{{ site.baseurl }}/jf">Jerry Feng</a> - 
+            <a href="{{ site.baseurl }}/mz">Mason Zhou</a>
+          </footer>
+        </div>
+      </div>
+    </main>
+    
+    <nav class="cd-3d-nav-container">
+      <ul class="cd-3d-nav">
+        <li class="">
+          <a href="{{ site.baseurl }}/">Logs</a>
+        </li>
+        <li class="{%if page.permalink=='/schedule/'%}cd-selected{%endif%}">
+          <a href="{{ site.baseurl }}/schedule">Schedule</a>
+        </li>
+      </ul> <!-- .cd-3d-nav -->
+
+    </nav> <!-- .cd-3d-nav-container -->
+    
   </body>
 </html>
