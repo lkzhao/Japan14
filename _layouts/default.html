@@ -29,8 +29,11 @@
 
   <body data-spy="scroll" data-target=".navbar-example">
     <header class="cd-header navbar clearfix">
-
-      <img class="bg" src="{{ site.baseurl }}/images/{{site.bg}}" />
+      {%if page.coverImage %}
+        <img class="bg" src="{{ site.baseurl }}/images/{{page.coverImage}}" />
+      {%else%}
+        <img class="bg" src="{{ site.baseurl }}/images/{{site.bg}}" />
+      {%endif%}
       <!-- <nav class="animated fadeIn ">
         <div class="container">
           <a href="{{ site.baseurl }}/">Logs</a>
