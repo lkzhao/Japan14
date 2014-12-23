@@ -10,8 +10,8 @@ layout: default
   		    <a href="{{ site.baseurl }}{{ post.url }}" class="title">{{ post.title }}</a>
   		    <p>{{ post.date | date: "%B %e, %Y" }} • {{ post.author }}</p>
   		  </h1>
+        <img src="{{ site.baseurl }}/images/{{page.coverImage}}" />
 	      
-	
 	      <div class="entry">
 	        {{ post.content | split:'<!--break-->' | first }}
 	        
