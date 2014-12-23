@@ -1,9 +1,9 @@
 .post-title{
 	a{
-		color:#333;
+		color:$blue;
 		margin:0;
 		&:hover{
-			color:#333;
+			color:$blue2;
 			text-decoration: underline;
 		}
 	}
