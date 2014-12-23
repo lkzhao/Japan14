@@ -31,6 +31,12 @@
     <header class="cd-header navbar clearfix">
       {%if page.coverImage %}
         <img class="bg" src="{{ site.baseurl }}/images/{{page.coverImage}}" />
+        <div class="container">
+          <a href="#0" class="cd-3d-nav-trigger">
+            Menu
+            <span></span>
+          </a>
+        </div>
       {%else%}
         <img class="bg" src="{{ site.baseurl }}/images/{{site.bg}}" />
         <div class="container">
