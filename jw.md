@@ -4,9 +4,7 @@ title: Jerry Wei
 permalink: /jw/
 ---
 
-Jerry Wei
-
-###Intro
+<img class="pull-right" src="{{ site.baseurl }}/images/jw.jpg" />
 
 My name is Jerry Wei. I'm a junior in math major at Calrton college, a liberal art school in Northfield, Minnesota.
 
