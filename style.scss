@@ -307,6 +307,7 @@ img.pull-right{
   margin-left: 10px;
 }
 img.pull-left,img.pull-right{
+  margin-bottom: 10px;
   @include mobile {
     float: none;
     width: 100%;
@@ -314,6 +315,12 @@ img.pull-left,img.pull-right{
   }
   &::after{
     clear:both;
+  }
+}
+.half-width{
+  width: 49%;
+  @include mobile {
+    width: 100%;
   }
 }
 
