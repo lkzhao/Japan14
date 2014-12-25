@@ -153,15 +153,15 @@ main{
 .site-info {
   display: block;
   float:left;
-  margin: 170px auto 0;
+  margin: 190px auto 0;
   font-family: $Dosis;
   text-shadow: 0 0 3px rgba(0,0,0,1);
 
   @include medium {
-    margin-top: 100px;
+    margin-top: 120px;
   }
   @include mobile {
-    margin-top: 10px;
+    margin-top: 30px;
   }
 }
 
@@ -236,7 +236,7 @@ main{
 //   }
 // }
 .navbar {
-  padding: 20px 0;
+  padding: 0;
   position:relative;
   border-bottom: 2px solid #555;
   background-size: cover;
@@ -257,7 +257,6 @@ main{
   }
   @include mobile {
     height:180px;
-    padding: 0;
   }
 }
 
