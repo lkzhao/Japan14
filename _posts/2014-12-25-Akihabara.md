@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 秋叶原
+title: 第二天 - 秋叶原
 author: Luke
 coverImage: day0/DSC00078.JPG
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 第0天 
+title: 第一天 - 日本桥
 author: Luke, Mason
 coverImage: day0/DSC00098.JPG
 ---
