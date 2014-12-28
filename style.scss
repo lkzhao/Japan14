@@ -17,7 +17,7 @@ body {
 	background: $white;
   color: $darkGray;
   position: relative;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -44,22 +44,22 @@ main{
     
   h1 {
     font-family: 'Roboto', sans-serif;
-    font-size: 35px;
+    font-size: 38px;
     a {
       color: inherit;
     }
   }
 
   h2 {
-    font-size: 24px;
+    font-size: 32px;
   }
 
   h3 {
-    font-size: 20px;
+    font-size: 28px;
   }
 
   h4 {
-    font-size: 18px;
+    font-size: 24px;
     color: $gray;
   }
 
@@ -298,16 +298,15 @@ main{
 
 img.pull-left{
   float: left;
-  width: 50%;
   margin-right: 10px;
 }
 img.pull-right{
   float: right;
-  width: 50%;
   margin-left: 10px;
 }
 img.pull-left,img.pull-right{
   margin-bottom: 10px;
+  width: 48%;
   @include mobile {
     float: none;
     width: 100%;
@@ -318,7 +317,8 @@ img.pull-left,img.pull-right{
   }
 }
 .half-width{
-  width: 49%;
+  width: 48%;
+  margin-top: 5px;
   @include mobile {
     width: 100%;
   }

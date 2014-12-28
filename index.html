@@ -5,6 +5,7 @@ layout: default
 <div class="posts">
   {% for post in paginator.posts %}
     <article class="post">
+    <div class="clearfix" />
       <div class="container">
 	      <h1 class="post-title">
   		    <a href="{{ site.baseurl }}{{ post.url }}" class="title">{{ post.title }}</a>
